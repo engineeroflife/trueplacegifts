@@ -16,11 +16,14 @@
     }
 
     header {
-      text-align: center;
-      padding: 28px 20px;
-      background: white;
-      border-bottom: 1px solid #ddd;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 28px 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
 
     .logo {
       max-width: 230px;
@@ -28,6 +31,11 @@
       height: auto;
       margin-bottom: 8px;
     }
+    .bea-header {
+  width: clamp(55px, 8vw, 110px);
+  height: auto;
+  flex-shrink: 0;
+}
 
     header p {
       margin: 5px 0;
@@ -161,7 +169,7 @@
 <body>
 
 <header>
-
+<img src="Bea_the_Otter_with_Bag.jpg" alt="Bea the Otter" class="bea-header">
   <img
     src="true-place-gifts-logo.jpg"
     alt="True Place Gifts"
