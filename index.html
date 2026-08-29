@@ -16,41 +16,65 @@
     }
 
     header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  padding: 28px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 18px 30px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .bea-header {
+      width: clamp(55px, 6vw, 90px);
+      height: auto;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .logo {
+      width: clamp(150px, 18vw, 230px);
       max-width: 230px;
-      width: 80%;
       height: auto;
-      margin-bottom: 8px;
+      margin: 0;
+      display: block;
     }
-    .bea-header {
-  width: clamp(55px, 8vw, 110px);
-  height: auto;
-  flex-shrink: 0;
-}
 
-    header p {
-      margin: 5px 0;
+    .brand-text p {
+      margin: 2px 0 0;
       color: #555;
+      font-size: 14px;
+      text-align: center;
     }
 
     nav {
-      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(12px, 2vw, 28px);
+      margin: 0;
+      flex-wrap: nowrap;
     }
 
     nav a {
-      margin: 0 12px;
+      margin: 0;
       text-decoration: none;
       color: #1e3a5f;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .hero {
@@ -153,14 +177,96 @@
       color: white;
     }
 
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 20px;
+      }
+
+      .brand-group {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+      }
+    }
+
     @media (max-width: 650px) {
+      .bea-header {
+        width: clamp(50px, 16vw, 72px);
+      }
+
+      .logo {
+        width: clamp(145px, 50vw, 205px);
+      }
+
+      .brand-group {
+        gap: 8px;
+      }
+
+      .brand-text p {
+        font-size: 12px;
+      }
+
+      nav {
+        width: 100%;
+        gap: 6px 14px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 35px 18px;
+      }
+
       .hero h1 {
         font-size: 30px;
       }
 
+      .hero p {
+        font-size: 16px;
+      }
+
+      .story-content {
+        padding: 22px;
+      }
+
+      .bea {
+        margin: 40px 15px;
+        padding: 25px 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      header {
+        padding: 14px 12px;
+      }
+
+      .bea-header {
+        width: 52px;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .brand-text p {
+        font-size: 11px;
+      }
+
+      nav {
+        gap: 5px 10px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 5px 7px;
+        font-size: 13px;
       }
     }
   </style>
@@ -169,14 +275,28 @@
 <body>
 
 <header>
-<img src="Bea_the_Otter_with_Bag.jpg" alt="Bea the Otter" class="bea-header">
-  <img
-    src="true-place-gifts-logo.jpg"
-    alt="True Place Gifts"
-    class="logo"
-  >
 
-  <p>Sharing the good around us.</p>
+  <div class="brand-group">
+
+    <img
+      src="Bea_the_Otter_with_Bag.jpg"
+      alt="Bea the Otter"
+      class="bea-header"
+    >
+
+    <div class="brand-text">
+
+      <img
+        src="true-place-gifts-logo.jpg"
+        alt="True Place Gifts"
+        class="logo"
+      >
+
+      <p>Sharing the good around us.</p>
+
+    </div>
+
+  </div>
 
   <nav>
     <a href="#stories">Stories</a>
