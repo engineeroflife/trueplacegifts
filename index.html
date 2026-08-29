@@ -11,20 +11,22 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f8f6f3;
-      color: #1e3a5f;
+      color: #24364b;
       line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 35px 20px;
+      padding: 28px 20px;
       background: white;
       border-bottom: 1px solid #ddd;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
+    .logo {
+      max-width: 230px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 8px;
     }
 
     header p {
@@ -33,7 +35,7 @@
     }
 
     nav {
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
     nav a {
@@ -45,12 +47,13 @@
 
     .hero {
       text-align: center;
-      padding: 55px 20px;
+      padding: 50px 20px;
     }
 
-    .hero h2 {
-      font-size: 36px;
+    .hero h1 {
+      font-size: 38px;
       margin-bottom: 15px;
+      color: #1e3a5f;
     }
 
     .hero p {
@@ -60,39 +63,64 @@
     }
 
     .stories {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       padding: 20px;
     }
 
     .story {
       background: white;
-      margin-bottom: 25px;
-      padding: 30px;
-      border-radius: 8px;
+      margin-bottom: 35px;
+      border-radius: 10px;
       border: 1px solid #e3e0db;
+      overflow: hidden;
+    }
+
+    .story img {
+      width: 100%;
+      max-height: 470px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-content {
+      padding: 30px;
     }
 
     .story h2 {
       margin-top: 0;
+      color: #1e3a5f;
     }
 
     .story a {
       color: #1e3a5f;
       font-weight: bold;
+      text-decoration: none;
     }
 
     .bea {
       max-width: 900px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 35px;
-      background: #ffffff;
-      border-radius: 8px;
+      background: white;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .bea img {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .bea p {
+      text-align: left;
     }
 
     .map {
       text-align: center;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
 
     .button {
@@ -116,13 +144,30 @@
     footer a {
       color: white;
     }
+
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>True Place Gifts</h1>
+
+  <img
+    src="true-place-gifts-logo.jpg"
+    alt="True Place Gifts"
+    class="logo"
+  >
+
   <p>Sharing the good around us.</p>
 
   <nav>
@@ -131,77 +176,129 @@
     <a href="#map">Explore the Map</a>
     <a href="mailto:hello@trueplacegifts.com">Contact</a>
   </nav>
+
 </header>
 
 
 <section class="hero">
-  <h2>Celebrating the stories behind every place.</h2>
+
+  <h1>Celebrating the stories behind every place.</h1>
 
   <p>
     Until the gifts arrive, we're sharing the stories that make each place
     special — because meaning comes before merchandise.
   </p>
+
 </section>
 
 
 <section class="stories" id="stories">
 
-  <div class="story">
-    <h2>The Coin That Flips the Super Bowl</h2>
+  <article class="story">
 
-    <p>
-      Every Super Bowl coin is born on Florida's Space Coast, where The
-      Highland Mint transforms craftsmanship into history — and fans can
-      own a piece of the game's first moment.
-    </p>
+    <img
+      src="super-bowl-coin.webp"
+      alt="The Coin That Flips the Super Bowl"
+    >
 
-    <a href="super-bowl-coin.html">Read the story →</a>
-  </div>
+    <div class="story-content">
 
+      <h2>The Coin That Flips the Super Bowl</h2>
 
-  <div class="story">
-    <h2>General Tom Thumb's Global Adventure Rooted in Middleborough, MA.</h2>
+      <p>
+        Every Super Bowl coin is born on Florida's Space Coast, where The
+        Highland Mint transforms craftsmanship into history — and fans can
+        own a piece of the game's first moment.
+      </p>
 
-    <p>
-      Discover the inspiring story of General Tom Thumb and Lavinia Warren —
-      from small-town Massachusetts to global stardom under P.T. Barnum.
-      Explore their 19th-century fame, marriage, and legacy.
-    </p>
+      <a href="super-bowl-coin.html">Read the story →</a>
 
-    <a href="tom-thumb.html">Read the story →</a>
-  </div>
+    </div>
+
+  </article>
 
 
-  <div class="story">
-    <h2>From The Ice Age to The Space Age in Brevard County, FL</h2>
+  <article class="story">
 
-    <p>
-      Discover the incredible story of the Windover People — a 7,000-year-old
-      community preserved in a Brevard County, Florida pond. From ancient
-      textiles and tools to modern rockets on the Space Coast, this region's
-      journey reveals a place shaped by curiosity, innovation, and discovery.
-    </p>
+    <img
+      src="tom-thumb.jpg"
+      alt="General Tom Thumb"
+    >
 
-    <a href="windover.html">Read the story →</a>
-  </div>
+    <div class="story-content">
+
+      <h2>General Tom Thumb's Global Adventure Rooted in Middleborough, MA.</h2>
+
+      <p>
+        Discover the inspiring story of General Tom Thumb and Lavinia Warren —
+        from small-town Massachusetts to global stardom under P.T. Barnum.
+        Explore their 19th-century fame, marriage, and legacy.
+      </p>
+
+      <a href="tom-thumb.html">Read the story →</a>
+
+    </div>
+
+  </article>
 
 
-  <div class="story">
-    <h2>The Ice Cream That Wanted to Go to Space.</h2>
+  <article class="story">
 
-    <p>
-      From a NASA experiment to a nostalgic treat, discover how freeze-dried
-      ice cream transformed from a space-age idea into a sweet symbol of
-      curiosity and creativity still made in Colorado today.
-    </p>
+    <img
+      src="windover.webp"
+      alt="Windover People in Brevard County Florida"
+    >
 
-    <a href="space-ice-cream.html">Read the story →</a>
-  </div>
+    <div class="story-content">
+
+      <h2>From The Ice Age to The Space Age in Brevard County, FL</h2>
+
+      <p>
+        Discover the incredible story of the Windover People — a 7,000-year-old
+        community preserved in a Brevard County, Florida pond. From ancient
+        textiles and tools to modern rockets on the Space Coast, this region's
+        journey reveals a place shaped by curiosity, innovation, and discovery.
+      </p>
+
+      <a href="windover.html">Read the story →</a>
+
+    </div>
+
+  </article>
+
+
+  <article class="story">
+
+    <img
+      src="space-ice-cream.webp"
+      alt="The Ice Cream That Wanted to Go to Space"
+    >
+
+    <div class="story-content">
+
+      <h2>The Ice Cream That Wanted to Go to Space.</h2>
+
+      <p>
+        From a NASA experiment to a nostalgic treat, discover how freeze-dried
+        ice cream transformed from a space-age idea into a sweet symbol of
+        curiosity and creativity still made in Colorado today.
+      </p>
+
+      <a href="space-ice-cream.html">Read the story →</a>
+
+    </div>
+
+  </article>
 
 </section>
 
 
 <section class="bea" id="bea">
+
+  <img
+    src="bea.png"
+    alt="Bea the Otter"
+  >
 
   <h2>Meet Bea – Sharing The Good Around Us.</h2>
 
@@ -237,14 +334,14 @@
 
   <h2>Explore Our Stories by Location</h2>
 
-  <p>
-    Travel through the places behind our stories.
-  </p>
+  <p>Travel through the places behind our stories.</p>
 
-  <a class="button"
-     href="https://engineeroflife.github.io/trueplace-map/"
-     target="_blank">
-     Explore the Map
+  <a
+    class="button"
+    href="https://engineeroflife.github.io/trueplace-map/"
+    target="_blank"
+  >
+    Explore the Map
   </a>
 
 </section>
