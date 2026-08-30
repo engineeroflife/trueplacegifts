@@ -165,7 +165,70 @@
       text-decoration: none;
       border-radius: 5px;
     }
+.contact {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 35px 20px;
+  text-align: center;
+}
 
+.contact h2 {
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #1e3a5f;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  background: white;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  background: #1e3a5f;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.contact-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #64748b;
+}
     footer {
       margin-top: 50px;
       padding: 30px 20px;
@@ -303,7 +366,7 @@
     <a href="#stories">Stories</a>
     <a href="#bea">Meet Bea</a>
     <a href="#map">Explore the Map</a>
-    <a href="mailto:hello@trueplacegifts.com">Contact</a>
+<a href="#contact">Contact</a>
   </nav>
 
 </header>
@@ -474,7 +537,39 @@
   </a>
 
 </section>
+<section class="contact" id="contact">
 
+  <h2>Get in Touch</h2>
+
+  <p>
+    Have a story, place, or local find you'd like to share?
+    We'd love to hear from you.
+  </p>
+
+  <form class="contact-form" onsubmit="event.preventDefault();">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email">
+
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Tell us what's on your mind..."
+    ></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+  <div class="contact-note">
+    Contact form coming soon.
+  </div>
+
+</section>
 
 <footer>
 
@@ -483,7 +578,7 @@
   <p>Sharing the good around us.</p>
 
   <p>
-    <a href="mailto:hello@trueplacegifts.com">Contact</a>
+    <a href="#contact">Contact</a>
   </p>
 
 </footer>
